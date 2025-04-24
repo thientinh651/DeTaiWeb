@@ -1,0 +1,557 @@
+/* CSS Document */
+@charset "utf-8";
+
+body {
+    /* background-position: top;
+    background-repeat: repeat-x; */
+    /* margin: 0; */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#container {
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+#menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+#menu_content {
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    float: flex;
+}
+
+#hmenu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hmenu li {
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+.hmenuli {
+    padding-bottom: 8px;
+}
+
+.hmenuli sup {
+    color: red;
+    font-size: x-small;
+}
+
+/* #hmenu li a:hover {
+    color: #d60f0f
+} */
+
+#hmenu a {
+    color: #000000;
+    font-weight: bold;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+}
+
+#hmenu li a:hover {
+    /* color: #162b4e;
+    font-weight: bold;
+    font-style: italic; */
+    border-bottom: 2px solid #000000; /* <-- Đây nè */
+    transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.search-container {
+    display: flex;
+
+}
+
+/* responsive */
+/* Nút hamburger cho mobile */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #hmenu {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      padding: 0;
+  }
+
+  #hmenu li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  #hmenu.active {
+      display: flex;
+  }
+}
+
+
+#header {
+    /* width: 100%; */
+    height: 100vh;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* justify-content: left; */
+    align-items: end;
+    padding-left: 100px;
+}
+
+#header dl {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#header p {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #header {
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  #header dl {
+      font-size: 20px;
+  }
+
+  #header p {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 70vh;
+  }
+
+  #header dl {
+      font-size: 18px;
+  }
+
+  #header p {
+      font-size: 18px;
+  }
+}
+
+/* mau sac */
+
+.txtcolorChoice {
+    text-align: center;
+
+}
+
+.txtcolorChoice p {
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.colorChoice {
+    width: 100%;
+    height: 200px;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffffff;
+    /* tuỳ chọn */
+}
+
+.colorChoice img {
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.colorChoice img:hover {
+    transform: scale(1.1);
+}
+
+#menu2 {
+    width: 100%;
+    height: 60px;
+    background-color: #d9d6d6;
+    margin: 0 auto; /* giúp căn giữa khối theo chiều ngang */
+}
+#menu2dl {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu2 dt {
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#menu2 dt a {
+    color: black;
+    opacity: 0.5;
+    font-size: 18   px;
+    font-family: VN-KiaSignature-Bold, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+}
+ /* Sau menu tro di */
+
+ .videooto {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    /* position: relative; */
+  }
+  
+  .left {
+    flex: 6;  /* cho 60% theo tỷ lệ Flexbox */
+  }
+  
+  .left iframe {
+    width: 100%;
+    height: 390px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .right {
+    flex: 4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Chữ nền "S" */
+  .ChuSnen{
+    position: absolute;
+    top: -0px;
+    left: -10px;
+    font-size: 160px;
+    color: #e0e0e0;
+    font-weight: bold;
+    z-index: 0;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Phần chữ phía trước */
+  .right h1, .right p {
+    position: relative;
+    padding-left: 40px;
+    z-index: 1;
+  }
+  
+  .right h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .right p {
+    font-size: 18px;
+    /* line-height: 1.6; */
+  }
+  
+/* vận hành */
+.vanhanh-container {
+    display: flex;
+    background-color: #0c151d;
+    color: white;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .vanhanh-left {
+    flex: 1;
+  }
+  
+  .vanhanh-left ul {
+    /* list-style: none; */
+    padding: 0;
+  }
+  
+  .vanhanh-left li {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .vanhanh-left li.active {
+    color: white;
+    opacity: 1;
+    position: relative;
+  }
+  
+  .vanhanh-left li.active::before {
+    /* content: '●'; */
+    position: absolute;
+    left: -25px;
+    color: white;
+  }
+  
+  .vanhanh-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .vanhanh-right img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .vanhanh-right p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+
+/* ảnh xe */
+.car-gallery {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .car-gallery h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  } */
+  .gallery img {
+    width: 100%;
+    height: 200px; /* bạn có thể thay đổi theo ý, ví dụ 250px */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+/* giá xe */
+  table.car-price {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  table.car-price thead {
+    background-color: #f1f1f1;
+  }
+
+  table.car-price th, 
+  table.car-price td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  table.car-price th {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  table.car-price tbody tr:hover {
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease;
+  }
+
+  table.car-price tbody td {
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+/* kế footer */
+.footer-extended {
+    background-color: #0f1923;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 5px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-logo-info img {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.footer-app {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.app-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer {
+    height: 60px;
+    background-color: #fff;
+    color: #656363;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    font-style: italic;
+    /* background-image: url(../images/layout/footer_bg.gif); */
+}
