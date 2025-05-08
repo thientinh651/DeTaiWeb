@@ -531,6 +531,9 @@ body {
 }
 
 /* giá xe */
+.khungGia{
+  width: 100%;
+}
 table.car-price {
   width: 100%;
   border-collapse: collapse;
