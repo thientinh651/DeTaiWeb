@@ -27,13 +27,16 @@
     <div id="menu_content">
         <!-- Nút hamburger -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
+        <!-- <a href="javascript:void(0);" class="icon"  onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a> -->
         <ul id="hmenu">
             <li><a href="#topMain">Trang chủ</a></li>
             <li class="hmenuli"><a href="#topMain">Sorento <sup>NEW</sup></a></li>
             <li><a href="#topMain">KIA connect</a></li>
             <li><a href="#topMain">Giá xe</a></li>
             <li><img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></li>
+            <li id="logoAn"><img src="images/LogoChuDenfinal.png" style="width:50pxpx;height:20px;"></li>
             <li><a href="#topMain">Dịch vụ</a></li>
             <li><a href="#topMain">Tin tức và khuyến mãi</a></li>
             <li><a href="#topMain">Liên hệ</a></li>
@@ -64,7 +67,7 @@
 
         <img src="images/MauSac/red.jpg" alt="Ảnh 4">
         <img src="images/MauSac/brown.jpg" alt="Ảnh 5">
-    </div>
+    </div>      
     <div id="menu2">
         <dl id="menu2dl">
             <dt><a href="#ToVideo"> Tổng quan </a></dt>
@@ -188,7 +191,6 @@
     </section>
 
 
-    <!-- Bắt đầu Footer mở rộng giống ảnh mẫu -->
     <div class="footer-extended">
         <div class="footer-grid">
             <div class="footer-logo-info">
@@ -236,8 +238,9 @@
 
             <div class="footer-col">
                 <h4>LIÊN HỆ</h4>
-                <p>📞 Hotline: 1900 545591</p>
-                <p>✉️ cskh@thaco.com.vn</p>
+                <ul>
+                    <li><a href="#">📞 Hotline: 1900 545591</a></li>
+                <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
             </div>
         </div>
 
@@ -259,7 +262,6 @@
             <a href="#">Điều khoản & điều kiện</a>
         </div>
     </div>
-    <!-- Kết thúc Footer mở rộng -->
 
 
 
@@ -296,6 +298,12 @@
         <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
     </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("responsive");
+        }
+    </script>
 </body>
 
 </html>
