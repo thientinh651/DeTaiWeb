@@ -1,10 +1,12 @@
 /* CSS Document */
 @charset "utf-8";
+
 * {
-  margin :0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   /* background-position: top;
     background-repeat: repeat-x; */
@@ -12,7 +14,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   left: 0;
-  right: 0; 
+  right: 0;
 }
 
 #container {
@@ -57,6 +59,7 @@ body {
 
 #logoAn {
   display: none;
+  padding: 10px;
 }
 
 .hmenuli sup {
@@ -106,23 +109,41 @@ body {
     display: none;
     width: 100%;
     padding: 0;
+    max-height: 300px;
+    /* overflow-y: auto; */
+
   }
 
-  #hmenu li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .menu-toggle {
-    display: block !important;
+  #hideLogo {
+    display: none;
   }
 
   #hmenu.active {
     display: flex;
   }
 
+  #hmenu li {
+    margin: 0px;
+  }
+
+  /* #hmenu li a {
+    position: absolute;
+  } */
+
+  .menu-toggle {
+    display: block !important;
+    color: black;
+
+  }
+
   #logoAn {
     display: block;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
   }
 }
 
@@ -225,6 +246,7 @@ body {
 .colorChoice img:hover {
   transform: scale(1.1);
 }
+
 /* 
 @media screen and (max-width: 500px) {
   .txtcolorChoice p {
@@ -253,10 +275,12 @@ body {
     gap: 20px;
     padding: 10px 0;
   }
-  
+
   .colorChoice img {
-    width: 60%; /* Điều chỉnh kích thước ảnh cho mobile */
-    max-width: 200px; /* Giới hạn kích thước tối đa */
+    width: 60%;
+    /* Điều chỉnh kích thước ảnh cho mobile */
+    max-width: 200px;
+    /* Giới hạn kích thước tối đa */
   }
 }
 
@@ -316,10 +340,12 @@ body {
   #menu2dl dt:last-child {
     border-bottom: none;
   }
+
   #menu2dl dt:hover {
     border-bottom: 3px solid #000000;
     transition: linear 0.2s;
   }
+
   #menu2 {
     height: auto;
   }
@@ -368,36 +394,40 @@ body {
   pointer-events: none;
   user-select: none;
 }
+
 @media screen and (max-width: 500px) {
   .videooto {
     flex-direction: column;
     gap: 20px;
     padding: 0 15px;
   }
-  
+
   .left,
   .right {
     flex: none;
     width: 100%;
   }
-  
+
   .left iframe {
-    max-height: 400px; /* Giảm chiều cao video cho mobile */
+    max-height: 400px;
+    /* Giảm chiều cao video cho mobile */
     min-height: 300px;
     height: auto;
   }
-  
+
   .ChuSnen {
-    font-size: 100px; /* Thu nhỏ chữ nền */
+    font-size: 100px;
+    /* Thu nhỏ chữ nền */
     left: 0;
     top: -20px;
   }
-  
+
   .right {
     padding-bottom: 30px;
     text-align: center;
   }
 }
+
 /* Phần chữ phía trước sau video */
 .right h1,
 .right p {
@@ -475,18 +505,21 @@ body {
   font-size: 18px;
   line-height: 1.6;
 }
+
 @media screen and (max-width: 500px) {
   .vanhanh-right p {
     font-size: 14px;
     line-height: 1.6;
   }
+
   .vanhanh-right img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
   }
-  .vanhanh-left{
+
+  .vanhanh-left {
     font-size: medium;
 
   }
@@ -535,11 +568,12 @@ body {
 }
 
 /* giá xe */
-.khungGia{
+.khungGia {
   width: 100%;
-  padding:0px 10px;
+  padding: 0px 10px;
   /* min-width: 220px; */
 }
+
 table.car-price {
   width: 100%;
   border-collapse: collapse;
@@ -659,9 +693,75 @@ table.car-price tbody td {
   text-decoration: underline;
 }
 
+/* table thông số kỹ thuật */
+.tsktTable {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.tsktTable h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.tsktTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tsktTable td {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-left: none; 
+  border-right: none;
+    vertical-align: middle; /* cho nội dung trong ô thẳng hàng */
+}
+
+.tsktTable tr:nth-child(even) {
+  background-color: #f5f8f9;
+}
+
+.tsktTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.tsktTable td:first-child {
+  font-weight: 500;
+   text-align: left; 
+   border-left: 1px solid #e0e0e0; 
+}
+
+.tsktTable td:last-child {
+  border-right: 1px solid #e0e0e0; /* căn chữ vào giữa cho cột thứ hai */
+}
 
 
-
+/* cuộn lên đầu  */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: opacity 0.3s;
+}
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
 
 
 

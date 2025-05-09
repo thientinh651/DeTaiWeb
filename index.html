@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8">
@@ -22,21 +26,42 @@
 </head>
 
 <body id="topMain">
+    <script>
+        // function toggleMenu() {
+        //     document.getElementById("menu").classList.toggle("responsive");
+        // }
+        function toggleMenu() {
+            document.getElementById("hmenu").classList.toggle("active");
+        }
+        let viTri = window.scrollY;
+        window.addEventListener("scroll", function () {
+            const hmenu = document.getElementById("hmenu");
+            if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+                if (window.scrollY > viTri + 10) {//xuống 10x ẩn 
+                    hmenu.classList.remove("active");
+                }
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
     <!-- Thanh menu top chính -->
     <div id="menu">
         <div id="menu_content">
             <!-- Nút hamburger -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <!-- <a href="javascript:void(0);" class="icon"  onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </a> -->
+            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
+            <a href="javascript:void(0);" class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <li id="logoAn"><a href="#topMain"><img src="images/LogoChuDenfinal.png"
+                        style="width:50pxpx;height:20px;"></a></li>
+            </a>
             <ul id="hmenu">
                 <li><a href="#topMain">Trang chủ</a></li>
                 <li class="hmenuli"><a href="#topMain">Sorento <sup>NEW</sup></a></li>
                 <li><a href="#topMain">KIA connect</a></li>
-                <li><a href="#topMain">Giá xe</a></li>
-                <li><img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></li>
-                <li id="logoAn"><img src="images/LogoChuDenfinal.png" style="width:50pxpx;height:20px;"></li>
+                <li><a href="#giaBan">Giá xe</a></li>
+                <li id="hideLogo"> <a href="#topMain">
+                        <img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></a></li>
                 <li><a href="#topMain">Dịch vụ</a></li>
                 <li><a href="#topMain">Tin tức và khuyến mãi</a></li>
                 <li><a href="#topMain">Liên hệ</a></li>
@@ -71,11 +96,11 @@
     <div id="menu2">
         <dl id="menu2dl">
             <dt><a href="#ToVideo"> Tổng quan </a></dt>
-            <dt><a href="#">Thông số kỹ thuật </a></dt>
+            <dt><a href="tskt.html">Thông số kỹ thuật </a></dt>
             <dt><a href="#hinhAnhXe">Thư viện hình ảnh</a></dt>
             <dt><a href="#giaBan">Giá bán</a></dt>
             <dt><a href="#">So sánh </a></dt>
-            <dt><a href="#">E Brochure</a></dt>
+            <dt><a href="https://kiavietnam.com.vn/storage/brochure-sorento-v131124.pdf">E Brochure</a></dt>
 
         </dl>
     </div>
@@ -295,6 +320,9 @@
 
 
 
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        ^
+    </button>
 
 
     <div id="footer">
@@ -302,11 +330,7 @@
     </div>
     </div>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("menu").classList.toggle("responsive");
-        }
-    </script>
+
 </body>
 
 </html>

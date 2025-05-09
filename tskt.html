@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Sorento 2023</title>
+    <link rel="icon" type="image/x-icon" href="images/logonentrang.jpg">
+    <!-- <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body id="topMain">
+    <script>
+        function toggleMenu() {
+            document.getElementById("hmenu").classList.toggle("active");
+        }
+        // let viTri = window.scrollY;
+        // window.addEventListener("scroll", function () {
+        //     const hmenu = document.getElementById("hmenu");
+        //     if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+        //         if (window.scrollY > viTri + 10) {//xuống 10x ẩn 
+        //             hmenu.classList.remove("active");
+        //         }
+        //     }
+        //     lastScrollY = window.scrollY;
+        // });
+        let viTriCu = window.scrollY; // vị trí cuộn trước đó
+
+        window.addEventListener("scroll", function () {
+            const hmenu = document.getElementById("hmenu");
+
+            // chỉ xử lý nếu màn hình nhỏ và menu đang mở
+            if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+                if (window.scrollY > viTriCu + 10) {
+                    hmenu.classList.remove("active");
+                }
+            }
+
+            viTriCu = window.scrollY; // luôn cập nhật vị trí sau mỗi lần cuộn
+        });
+    </script>
+    <!-- Thanh menu top chính -->
+    <div id="menu">
+        <div id="menu_content">
+            <!-- Nút hamburger -->
+            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
+            <a href="javascript:void(0);" class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <li id="logoAn"><a href="index.html"><img src="images/LogoChuDenfinal.png"
+                        style="width:50pxpx;height:20px;"></a></li>
+            </a>
+            <ul id="hmenu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
+                <li><a href="index.html">KIA connect</a></li>
+                <li><a href="index.html">Giá xe</a></li>
+                <li id="hideLogo"> <a href="index.html">
+                        <img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></a></li>
+                <li><a href="index.html">Dịch vụ</a></li>
+                <li><a href="index.html">Tin tức và khuyến mãi</a></li>
+                <li><a href="index.html">Liên hệ</a></li>
+                <li><a href="index.html"><img src="images/searchIcon.png" style="width: 20px;height:20px;"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tsktTable">
+        <h3>KÍCH THƯỚC - TRỌNG LƯỢNG</h3>
+        <table>
+            <tr>
+                <td>Kích thước tổng thể (mm) / Overall dimensions (mm)</td>
+                <td>4,810 × 1,900 × 1,700 mm</td>
+            </tr>
+            <tr>
+                <td>Chiều dài cơ sở (mm) / Wheelbase (mm)</td>
+                <td>2,815 mm</td>
+            </tr>
+            <tr>
+                <td>Khoảng sáng gầm xe (mm) / Ground clearance (mm)</td>
+                <td>176 mm</td>
+            </tr>
+            <tr>
+                <td>Bán kính quay vòng tối thiểu (m) / Turning circle (m)</td>
+                <td>5.78 m</td>
+            </tr>
+            <tr>
+                <td>Dung tích thùng nhiên liệu (L) / Fuel tank capacity (L)</td>
+                <td>67 L</td>
+            </tr>
+            <tr>
+                <td>Thể tích khoang hành lý (L) / Boot space (L)</td>
+                <td>357 L</td>
+            </tr>
+            <tr>
+                <td>Số chỗ ngồi / Seat capacity</td>
+                <td>7 chỗ</td>
+            </tr>
+        </table>
+        <h3>Động cơ - Hộp số</h3>
+        <table>
+            <tr>
+                <td>Loại động cơ / Engine type</td>
+                <td>Smartstream 2.5G</td>
+            </tr>
+            <tr>
+                <td>Công suất cực đại / Max. power</td>
+                <td>177 hp / 6,000 rpm</td>
+            </tr>
+            <tr>
+                <td>Mômen xoắn cực đại / Max. torque</td>
+                <td>232 Nm / 4,000 rpm</td>
+            </tr>
+            <tr>
+                <td>Hộp số / Transmission</td>
+                <td>6AT</td>
+            </tr>
+            <tr>
+                <td>Hệ thống dẫn động / Drivertrain</td>
+                <td>2 cầu / AWD</td>
+            </tr>
+            <tr>
+                <td>Chế độ lái / Drive mode</td>
+                <td>Comfort/ Eco/ Sport/ Smart</td>
+            </tr>
+            <tr>
+                <td>Chế độ địa hình / Terrain mode</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+        <h3>Khung gầm</h3>
+        <table>
+            <tr>
+                <td>Hệ thống treo trước / Front Suspension</td>
+                <td>McPherson</td>
+            </tr>
+            <tr>
+                <td>Hệ thống treo sau / Rear Suspension</td>
+                <td>Liên kết đa điểm</td>
+            </tr>
+            <tr>
+                <td>Hệ thống phanh trước / Front Brakes</td>
+                <td>Đĩa</td>
+            </tr>
+            <tr>
+                <td>Hệ thống phanh sau / Rear Brakes</td>
+                <td>Đĩa</td>
+            </tr>
+            <tr>
+                <td>Thông số lốp xe / Tires</td>
+                <td>235/55 R19</td>
+            </tr>
+            <tr>
+                <td>Mâm xe / Wheel</td>
+                <td>Mâm hợp kim 19 inch</td>
+            </tr>
+        </table>
+
+        <h3>Ngoại thất</h3>
+        <table>
+            <tr>
+                <td>Cụm đèn trước / Headlights</td>
+                <td>LED Projector</td>
+            </tr>
+            <tr>
+                <td>Đèn pha tự động / Auto headlight</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>HBA / High Beam Assist</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Đèn ban ngày / Daylight</td>
+                <td>LED</td>
+            </tr>
+            <tr>
+                <td>Đèn sương mù / Fog lights</td>
+                <td>LED</td>
+            </tr>
+            <tr>
+                <td>Đèn sau / Rear lamps</td>
+                <td>LED</td>
+            </tr>
+            <tr>
+                <td>Gương chiếu hậu gập điện</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Gạt mưa tự động</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Baga mui / Roof rails</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Cốp điện / Tailgate</td>
+                <td>Thông minh</td>
+            </tr>
+            <tr>
+                <td>Cửa sổ trời / Sunroof</td>
+                <td>Panorama</td>
+            </tr>
+            <tr>
+                <td>Bệ bước chân</td>
+                <td>●</td>
+            </tr>
+        </table>
+
+        <h3>Nội thất</h3>
+        <table>
+            <tr>
+                <td>Vô lăng bọc da</td>
+                <td>● + sưởi</td>
+            </tr>
+            <tr>
+                <td>Chất liệu ghế</td>
+                <td>Da nâu</td>
+            </tr>
+            <tr>
+                <td>Ghế lái chỉnh điện</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Ghế nhớ vị trí</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Ghế hành khách điện</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Sưởi/làm mát ghế trước</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Sưởi ghế sau</td>
+                <td>Chỉ sưởi</td>
+            </tr>
+            <tr>
+                <td>Màn hình đa thông tin</td>
+                <td>12.3 inch</td>
+            </tr>
+            <tr>
+                <td>Màn hình AVN</td>
+                <td>10.25 inch</td>
+            </tr>
+            <tr>
+                <td>Apple CarPlay / Android Auto</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Âm thanh</td>
+                <td>12 loa Bose</td>
+            </tr>
+            <tr>
+                <td>Điều hoà</td>
+                <td>2 vùng</td>
+            </tr>
+            <tr>
+                <td>Cửa gó AC sau</td>
+                <td>Hàng 2,3</td>
+            </tr>
+            <tr>
+                <td>Sạc không dây</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Gương chống chói</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Rèm che nắng</td>
+                <td>Hàng ghế 2</td>
+            </tr>
+            <tr>
+                <td>Smart key + khởi động</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Khởi động từ xa</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>HUD</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Lẩy chuyển số</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Phanh tay điện tử</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Chuyển số điện tử</td>
+                <td>Dạng gạt</td>
+            </tr>
+        </table>
+
+        <h3>An toàn</h3>
+        <table>
+            <tr>
+                <td>Túi khí / Airbags</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>ABS</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>ESC</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>HAC</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Cảm biến đỗ xe</td>
+                <td>Trước & sau</td>
+            </tr>
+            <tr>
+                <td>Camera lùi</td>
+                <td>Camera 360</td>
+            </tr>
+            <tr>
+                <td>BVM</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>TPMS</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>Cruise Control</td>
+                <td>Thích ứng</td>
+            </tr>
+            <tr>
+                <td>LKA</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>LFA</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>FCA</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>BCA</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>RCCA</td>
+                <td>●</td>
+            </tr>
+            <tr>
+                <td>SEA</td>
+                <td>Khóa trẻ em</td>
+            </tr>
+            <tr>
+                <td>DAW</td>
+                <td>●</td>
+            </tr>
+        </table>
+
+        <h3>Mức tiêu thụ nhiên liệu (L/100Km)</h3>
+        <table>
+            <tr>
+                <td>Kết hợp</td>
+                <td>8.93</td>
+            </tr>
+            <tr>
+                <td>Trong đô thị</td>
+                <td>11.64</td>
+            </tr>
+            <tr>
+                <td>Ngoài đô thị</td>
+                <td>7.32</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="footer-extended">
+        <div class="footer-grid">
+            <div class="footer-logo-info">
+                <img src="images/logonentrang.jpg" alt="Kia Logo" style="height: 10%;width: auto;">
+                <p><strong>CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
+                <p>Giấy CNĐKDN: 4000779880, cấp 27/10/2010</p>
+                <p>Cơ quan cấp: Sở KH & ĐT tỉnh Quảng Nam</p>
+                <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
+                <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
+                <div class="social-icons">
+                    <!-- <a href="#"><img src="images/facebook.png" alt="Facebook" width="24"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram" width="24"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a> -->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>SẢN PHẨM</h4>
+                <ul>
+                    <li><a href="#">Hatchback</a></li>
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>DỊCH VỤ</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu chung</a></li>
+                    <li><a href="#">Dịch vụ sửa chữa</a></li>
+                    <li><a href="#">Bảo dưỡng định kỳ</a></li>
+                    <li><a href="#">Chế độ bảo hành</a></li>
+                    <li><a href="#">Kia Connect</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>VỀ KIA</h4>
+                <ul>
+                    <li><a href="#">Kia Toàn Cầu</a></li>
+                    <li><a href="#">Kia Việt Nam</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <ul>
+                    <!-- <li><a href="#">📞 Hotline: 1900 545591</a></li> -->
+                    <li><a href="tel:1900 545591">📞 Hotline: 1900 545591</a></li>
+                    <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
+            </div>
+        </div>
+
+        <!-- <div class="footer-app">
+        <h4>TẢI ỨNG DỤNG KIA CONNECT</h4>
+        <div class="app-download">
+            <img src="images/qr.png" alt="QR Code" width="100">
+            <div>
+                <a href="#"><img src="images/googleplay.png" width="120"></a>
+                <a href="#"><img src="images/appstore.png" width="120"></a>
+            </div>
+        </div>
+    </div> -->
+
+        <div class="footer-links">
+            <a href="#">Chính sách thanh toán</a>
+            <a href="#">Bảo mật thông tin</a>
+            <a href="#">Giao nhận – vận chuyển</a>
+            <a href="#">Điều khoản & điều kiện</a>
+            <a href="CacBaiLab.html" target="_blank">Danh sách các bài lap</a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
