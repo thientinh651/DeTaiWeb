@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Sorento 2023</title>
+    <link rel="icon" type="image/x-icon" href="images/logonentrang.jpg">
+    <!-- <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body id="topMain">
+    <script>
+        function toggleMenu() {
+            document.getElementById("hmenu").classList.toggle("active");
+        }
+        // let viTri = window.scrollY;
+        // window.addEventListener("scroll", function () {
+        //     const hmenu = document.getElementById("hmenu");
+        //     if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+        //         if (window.scrollY > viTri + 10) {//xuống 10x ẩn 
+        //             hmenu.classList.remove("active");
+        //         }
+        //     }
+        //     lastScrollY = window.scrollY;
+        // });
+        let viTriCu = window.scrollY; // vị trí cuộn trước đó
+
+        window.addEventListener("scroll", function () {
+            const hmenu = document.getElementById("hmenu");
+
+            // chỉ xử lý nếu màn hình nhỏ và menu đang mở
+            if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+                if (window.scrollY > viTriCu + 10) {
+                    hmenu.classList.remove("active");
+                }
+            }
+
+            viTriCu = window.scrollY; // luôn cập nhật vị trí sau mỗi lần cuộn
+        });
+    </script>
+    <!-- Thanh menu top chính -->
+    <div id="menu">
+        <div id="menu_content">
+            <!-- Nút hamburger -->
+            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
+            <a href="javascript:void(0);" class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <li id="logoAn"><a href="index.html"><img src="images/LogoChuDenfinal.png"
+                        style="width:50pxpx;height:20px;"></a></li>
+            </a>
+            <ul id="hmenu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
+                <li><a href="index.html">KIA connect</a></li>
+                <li><a href="index.html">Giá xe</a></li>
+                <li id="hideLogo"> <a href="index.html">
+                        <img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></a></li>
+                <li><a href="index.html">Dịch vụ</a></li>
+                <li><a href="index.html">Tin tức và khuyến mãi</a></li>
+                <li><a href="index.html">Liên hệ</a></li>
+                <li><a href="index.html"><img src="images/searchIcon.png" style="width: 20px;height:20px;"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="car-gallery" id="hinhAnhXe">
+        <h1>Nội thất</h1>
+        <div class="gallery">
+            <img src="images/NoiThat/taplo.png" alt="Xe 1">
+            <img src="images/NoiThat/taplo2.png" alt="Xe 2">
+            <img src="images/NoiThat/taplo3.png" alt="Xe 3">
+            <img src="images/NoiThat/cansovan.png" alt="Xe 4">
+            <img src="images/NoiThat/dieuchinh.png" alt="Xe 5">
+            <img src="images/NoiThat/manhinh10'5inch.png" alt="Xe 6">
+            <img src="images/NoiThat/camde360.png" alt="Xe 7">
+            <img src="images/NoiThat/cumchinhDH.png" alt="Xe 8">
+            <img src="images/NoiThat/cumDHgan.png" alt="Xe 9">
+            <img src="images/NoiThat/yenngua.png" alt="Xe 10">
+            <img src="images/NoiThat/tongquannutbamghelai.png" alt="Xe 11">
+            <img src="images/NoiThat/volang4chau.png" alt="Xe 12">
+            <img src="images/NoiThat/nutbamphai.png" alt="Xe 13">
+            <img src="images/NoiThat/nutbamphai.png" alt="Xe 14">
+            <img src="images/NoiThat/gatmuachuyenso.png" alt="Xe 15">
+            <img src="images/NoiThat/xinhanden.png" alt="Xe 16">
+            <img src="images/NoiThat/odoLED.png" alt="Xe 17">
+            <img src="images/NoiThat/nhoghe.png" alt="Xe 18">
+            <img src="images/NoiThat/ghechinhdien.png" alt="Xe 19">
+            <img src="images/NoiThat/gehephuchinhdien.png" alt="Xe 20">
+            <img src="images/NoiThat/ghebocda.png" alt="Xe 21">
+            <img src="images/NoiThat/taynamcua.png" alt="Xe 22">
+            <img src="images/NoiThat/hangghe2.png" alt="Xe 23">
+            <img src="images/NoiThat/hang21.png" alt="Xe 24">
+            <img src="images/NoiThat/loasup.png" alt="Xe 25">
+            <img src="images/NoiThat/remche.png" alt="Xe 26">
+            <img src="images/NoiThat/cuasotroi.png" alt="Xe 27">
+            <img src="images/NoiThat/betitay.png" alt="Xe 28">
+            <img src="images/NoiThat/cambienmua.png" alt="Xe 29">
+            <img src="images/NoiThat/copdien.png" alt="Xe 30">
+            <img src="images/NoiThat/copsau.jpg" alt="Xe 31">
+            <img src="images/NoiThat/dungtichcop.png" alt="Xe 32">
+            <!-- <img src="images/NoiThat/" alt="Xe 33">
+            <img src="images/NoiThat/" alt="Xe 34"> -->
+        </div>
+    </section>
+
+
+    <div class="footer-extended">
+        <div class="footer-grid">
+            <div class="footer-logo-info">
+                <img src="images/logonentrang.jpg" alt="Kia Logo" style="height: 10%;width: auto;">
+                <p><strong>CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
+                <p>Giấy CNĐKDN: 4000779880, cấp 27/10/2010</p>
+                <p>Cơ quan cấp: Sở KH & ĐT tỉnh Quảng Nam</p>
+                <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
+                <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
+                <div class="social-icons">
+                    <!-- <a href="#"><img src="images/facebook.png" alt="Facebook" width="24"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram" width="24"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a> -->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>SẢN PHẨM</h4>
+                <ul>
+                    <li><a href="#">Hatchback</a></li>
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>DỊCH VỤ</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu chung</a></li>
+                    <li><a href="#">Dịch vụ sửa chữa</a></li>
+                    <li><a href="#">Bảo dưỡng định kỳ</a></li>
+                    <li><a href="#">Chế độ bảo hành</a></li>
+                    <li><a href="#">Kia Connect</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>VỀ KIA</h4>
+                <ul>
+                    <li><a href="#">Kia Toàn Cầu</a></li>
+                    <li><a href="#">Kia Việt Nam</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <ul>
+                    <!-- <li><a href="#">📞 Hotline: 1900 545591</a></li> -->
+                    <li><a href="tel:1900 545591">📞 Hotline: 1900 545591</a></li>
+                    <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
+            </div>
+        </div>
+
+        <!-- <div class="footer-app">
+        <h4>TẢI ỨNG DỤNG KIA CONNECT</h4>
+        <div class="app-download">
+            <img src="images/qr.png" alt="QR Code" width="100">
+            <div>
+                <a href="#"><img src="images/googleplay.png" width="120"></a>
+                <a href="#"><img src="images/appstore.png" width="120"></a>
+            </div>
+        </div>
+    </div> -->
+
+        <div class="footer-links">
+            <a href="#">Chính sách thanh toán</a>
+            <a href="#">Bảo mật thông tin</a>
+            <a href="#">Giao nhận – vận chuyển</a>
+            <a href="#">Điều khoản & điều kiện</a>
+            <a href="CacBaiLab.html" target="_blank">Danh sách các bài lap</a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

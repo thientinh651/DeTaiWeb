@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Sorento 2023</title>
+    <link rel="icon" type="image/x-icon" href="images/logonentrang.jpg">
+    <!-- <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body id="topMain">
+    <script>
+        function toggleMenu() {
+            document.getElementById("hmenu").classList.toggle("active");
+        }
+        // let viTri = window.scrollY;
+        // window.addEventListener("scroll", function () {
+        //     const hmenu = document.getElementById("hmenu");
+        //     if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+        //         if (window.scrollY > viTri + 10) {//xuống 10x ẩn 
+        //             hmenu.classList.remove("active");
+        //         }
+        //     }
+        //     lastScrollY = window.scrollY;
+        // });
+        let viTriCu = window.scrollY; // vị trí cuộn trước đó
+
+        window.addEventListener("scroll", function () {
+            const hmenu = document.getElementById("hmenu");
+
+            // chỉ xử lý nếu màn hình nhỏ và menu đang mở
+            if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
+                if (window.scrollY > viTriCu + 10) {
+                    hmenu.classList.remove("active");
+                }
+            }
+
+            viTriCu = window.scrollY; // luôn cập nhật vị trí sau mỗi lần cuộn
+        });
+    </script>
+    <!-- Thanh menu top chính -->
+    <div id="menu">
+        <div id="menu_content">
+            <!-- Nút hamburger -->
+            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
+            <a href="javascript:void(0);" class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <li id="logoAn"><a href="index.html"><img src="images/LogoChuDenfinal.png"
+                        style="width:50pxpx;height:20px;"></a></li>
+            </a>
+            <ul id="hmenu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
+                <li><a href="index.html">KIA connect</a></li>
+                <li><a href="index.html">Giá xe</a></li>
+                <li id="hideLogo"> <a href="index.html">
+                        <img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></a></li>
+                <li><a href="index.html">Dịch vụ</a></li>
+                <li><a href="index.html">Tin tức và khuyến mãi</a></li>
+                <li><a href="index.html">Liên hệ</a></li>
+                <li><a href="index.html"><img src="images/searchIcon.png" style="width: 20px;height:20px;"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="checkout__form">
+            <h4>Thông tin thanh toán</h4>
+            <form id="checkoutForm" action="#">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Tên<span>*</span></p>
+                                    <input type="text" id="firstNameInput">
+                                    <div class="error-message" id="firstNameErrorMessage"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Họ<span>*</span></p>
+                                    <input type="text" id="lastNameInput">
+                                    <div class="error-message" id="lastNameErrorMessage"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Quốc gia<span>*</span></p>
+                            <input type="text" id="nationInput">
+                            <div class="error-message" id="nationErrorMessage"></div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Địa chỉ<span>*</span></p>
+                            <input type="text" placeholder="Địa chỉ thường trú" class="checkout__input__add"
+                                id="adresseInput">
+                            <div class="error-message" id="adresseErrorMessage"></div>
+                            <input type="text" placeholder="Căn hộ, suite, unite ect (tùy chọn)" id="suiteInput">
+                            <div class="error-message" id="suiteErrorMessage"></div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Quê quán<span>*</span></p>
+                            <input type="text" id="countryInput">
+                            <div class="error-message" id="countryErrorMessage"></div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Mã bưu / ZIP<span>*</span></p>
+                            <input type="text" id="zipInput">
+                            <div class="error-message" id="zipErrorMessage"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Điện thoại<span>*</span></p>
+                                    <input type="text" id="numInput">
+                                    <div class="error-message" id="numErrorMessage"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Email<span>*</span></p>
+                                    <input type="text" id="emailInput">
+                                    <div class="error-message" id="emailErrorMessage"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout__input__checkbox">
+                            <label for="diff-acc">
+                                Gửi đến một địa chỉ khác?
+                                <input type="checkbox" id="diff-acc">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Ghi chú hóa đơn<span>*</span></p>
+                            <input type="text"
+                                placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: ghi chú đặc biệt để giao hàng."
+                                id="noteInput">
+                            <div class="error-message" id="noteErrorMessage"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="checkout__order">
+                            <h4>Hóa đơn của bạn</h4>
+                            <div class="checkout__order__products">Sản phẩm <span>Giá</span></div>
+
+                            <div class="checkout__order__subtotal">Tổng phụ <span>0 đ</span></div>
+                            <div class="checkout__order__total">Tổng hóa đơn <span>0 đ</span></div>
+                            <p>Đọc sách là một điều rất tốt cho cuộc sống của bạn, hãy luôn đặt mình vào hoàn cảnh
+                                nào đó, bạn sẽ
+                                nhận ra cuộc sống này rất thú vị.
+                            </p>
+                            <div class="checkout__input__checkbox">
+                                <label for="paypal">
+                                    Paypal
+                                    <input type="checkbox" id="paypal">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button type="button" class="site-btn" onclick="validateForm()">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="footer-extended">
+        <div class="footer-grid">
+            <div class="footer-logo-info">
+                <img src="images/logonentrang.jpg" alt="Kia Logo" style="height: 10%;width: auto;">
+                <p><strong>CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
+                <p>Giấy CNĐKDN: 4000779880, cấp 27/10/2010</p>
+                <p>Cơ quan cấp: Sở KH & ĐT tỉnh Quảng Nam</p>
+                <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
+                <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
+                <div class="social-icons">
+                    <!-- <a href="#"><img src="images/facebook.png" alt="Facebook" width="24"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram" width="24"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a> -->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>SẢN PHẨM</h4>
+                <ul>
+                    <li><a href="#">Hatchback</a></li>
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>DỊCH VỤ</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu chung</a></li>
+                    <li><a href="#">Dịch vụ sửa chữa</a></li>
+                    <li><a href="#">Bảo dưỡng định kỳ</a></li>
+                    <li><a href="#">Chế độ bảo hành</a></li>
+                    <li><a href="#">Kia Connect</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>VỀ KIA</h4>
+                <ul>
+                    <li><a href="#">Kia Toàn Cầu</a></li>
+                    <li><a href="#">Kia Việt Nam</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <ul>
+                    <!-- <li><a href="#">📞 Hotline: 1900 545591</a></li> -->
+                    <li><a href="tel:1900 545591">📞 Hotline: 1900 545591</a></li>
+                    <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
+            </div>
+        </div>
+
+        <!-- <div class="footer-app">
+        <h4>TẢI ỨNG DỤNG KIA CONNECT</h4>
+        <div class="app-download">
+            <img src="images/qr.png" alt="QR Code" width="100">
+            <div>
+                <a href="#"><img src="images/googleplay.png" width="120"></a>
+                <a href="#"><img src="images/appstore.png" width="120"></a>
+            </div>
+        </div>
+    </div> -->
+
+        <div class="footer-links">
+            <a href="#">Chính sách thanh toán</a>
+            <a href="#">Bảo mật thông tin</a>
+            <a href="#">Giao nhận – vận chuyển</a>
+            <a href="#">Điều khoản & điều kiện</a>
+            <a href="CacBaiLab.html" target="_blank">Danh sách các bài lap</a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
