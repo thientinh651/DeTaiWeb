@@ -51,15 +51,18 @@
                     hmenu.classList.remove("active");
                 }
             }
-
             viTriCu = window.scrollY; // luôn cập nhật vị trí sau mỗi lần cuộn
         });
+
+
+
+
+
+
     </script>
     <!-- Thanh menu top chính -->
     <div id="menu">
         <div id="menu_content">
-            <!-- Nút hamburger -->
-            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
             <a href="javascript:void(0);" class="menu-toggle" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -67,7 +70,7 @@
                         style="width:50pxpx;height:20px;"></a></li>
             </a>
             <ul id="hmenu">
-                               <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
                 <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
                 <li><a href="index.html">KIA connect</a></li>
                 <li><a href="#giaBan">Giá xe</a></li>
@@ -80,60 +83,61 @@
             </ul>
         </div>
     </div>
+    <div class="contact-form">
+        <h2>Đăng ký tư vấn mua xe</h2>
+        <form id="contactForm">
+            <label for="fullname">Họ và tên <sup>(*)</sup></label>
+            <input type="text" id="fullname" name="fullname" required>
 
-    <section class="car-gallery" id="hinhAnhXe">
-        <h1>Nội thất</h1>
-        <div class="gallery">
-            <img src="images/NoiThat/taplo.png" alt="Xe 1">
-            <img src="images/NoiThat/taplo2.png" alt="Xe 2">
-            <img src="images/NoiThat/taplo3.png" alt="Xe 3">
-            <img src="images/NoiThat/cansovan.png" alt="Xe 4">
-            <img src="images/NoiThat/dieuchinh.png" alt="Xe 5">
-            <img src="images/NoiThat/manhinh10'5inch.png" alt="Xe 6">
-            <img src="images/NoiThat/camde360.png" alt="Xe 7">
-            <img src="images/NoiThat/cumchinhDH.png" alt="Xe 8">
-            <img src="images/NoiThat/cumDHgan.png" alt="Xe 9">
-            <img src="images/NoiThat/yenngua.png" alt="Xe 10">
-            <img src="images/NoiThat/tongquannutbamghelai.png" alt="Xe 11">
-            <img src="images/NoiThat/volang4chau.png" alt="Xe 12">
-            <img src="images/NoiThat/nutbamphai.png" alt="Xe 13">
-            <img src="images/NoiThat/nutbamphai.png" alt="Xe 14">
-            <img src="images/NoiThat/gatmuachuyenso.png" alt="Xe 15">
-            <img src="images/NoiThat/xinhanden.png" alt="Xe 16">
-            <img src="images/NoiThat/odoLED.png" alt="Xe 17">
-            <img src="images/NoiThat/nhoghe.png" alt="Xe 18">
-            <img src="images/NoiThat/ghechinhdien.png" alt="Xe 19">
-            <img src="images/NoiThat/gehephuchinhdien.png" alt="Xe 20">
-            <img src="images/NoiThat/ghebocda.png" alt="Xe 21">
-            <img src="images/NoiThat/taynamcua.png" alt="Xe 22">
-            <img src="images/NoiThat/hangghe2.png" alt="Xe 23">
-            <img src="images/NoiThat/hang21.png" alt="Xe 24">
-            <img src="images/NoiThat/loasup.png" alt="Xe 25">
-            <img src="images/NoiThat/remche.png" alt="Xe 26">
-            <img src="images/NoiThat/cuasotroi.png" alt="Xe 27">
-            <img src="images/NoiThat/betitay.png" alt="Xe 28">
-            <img src="images/NoiThat/cambienmua.png" alt="Xe 29">
-            <img src="images/NoiThat/copdien.png" alt="Xe 30">
-            <img src="images/NoiThat/copsau.jpg" alt="Xe 31">
-            <img src="images/NoiThat/dungtichcop.png" alt="Xe 32">
-            <!-- <img src="images/NoiThat/" alt="Xe 33">
-            <img src="images/NoiThat/" alt="Xe 34"> -->
-        </div>
-         <h1>Ngoại thất</h1>
-        <div class="gallery">
-            <img src="images/NgoaiThat/calangLuoiHo.png" alt="Xe 1">
-            <img src="images/NgoaiThat/dau.jpg" alt="Xe 2">
-            <img src="images/NgoaiThat/dauxe.png" alt="Xe 3">
-            <img src="images/NgoaiThat/denled.png" alt="Xe 4">
-            <img src="images/NgoaiThat/mam5chau.png" alt="Xe 5">
-            <img src="images/NgoaiThat/denhau.png" alt="Xe 6">
-            <img src="images/NgoaiThat/duoixe.png" alt="Xe 7">
-            <img src="images/NgoaiThat/cambienlui.png" alt="Xe 8">
-            <!-- <img src="images/NgoaiThat/" alt="Xe 9">
-            <img src="images/NgoaiThat/" alt="Xe 10">
-            <img src="images/NgoaiThat/" alt="Xe 11"> -->
+            <label for="phone">Số điện thoại<sup>(*)</sup></label>
+            <input type="tel" id="phone" name="phone" required>
 
-    </section>
+            <label for="address">Địa chỉ<sup>(*)</sup></label>
+            <input type="text" id="address" name="address">
+
+            <label for="email">Email<sup>(*)</sup></label>
+            <input type="email" id="email" name="email">
+
+            <label for="carType">Loại xe quan tâm</label>
+            <select id="carType" name="carType">
+                <option value="">-- Chọn loại xe --</option>
+                <option value="Carnival">Carnival</option>
+                <option value="Carens">Carens</option>
+                <option value="EV6">EV6</option>
+                <option value="K3">K3</option>
+                <option value="K5">K5</option>
+                <option value="Morning">Morning</option>
+                <option value="Seltos">Seltos</option>
+                <option value="Soluto">Soluto</option>
+                <option value="Sonet">Sonet</option>
+                <option value="Sorento">Sorento</option>
+                <option value="Sportage">Sportage</option>
+                <option value="Telluride">Telluride</option>
+
+            </select>
+
+            <label for="kia-showroom">Chọn showroom KIA:</label>
+            <select id="kia-showroom" name="kia-showroom">
+                <option value="">--Chọn showroom--</option>
+                <option value="kia-bach-dang">KIA Bạch Đằng - 315 Nguyễn Khoái, Quận Hai Bà Trưng, Hà Nội</option>
+                <option value="kia-long-bien">KIA Long Biên - 105A Đường Lý Sơn, Quận Long Biên, Hà Nội</option>
+                <option value="kia-da-nang">KIA Đà Nẵng - 14 Phạm Văn Đồng, Quận Sơn Trà, TP. Đà Nẵng</option>
+                <option value="kia-vietnam">KIA Vietnam - 10 Mai Chí Thọ, Quận 2, TP. Hồ Chí Minh</option>
+                <option value="kia-phu-my-hung">KIA Phú Mỹ Hưng - 314 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</option>
+                <option value="kia-binh-tan">KIA Bình Tân - 75 Võ Văn Kiệt, Quận Bình Tân, TP. Hồ Chí Minh</option>
+                <option value="kia-go-vap">KIA Gò Vấp - 189 Nguyễn Oanh, Quận Gò Vấp, TP. Hồ Chí Minh</option>
+                <option value="kia-nguyen-van-troi">KIA Nguyễn Văn Trỗi - 80 Nguyễn Văn Trỗi, Quận Phú Nhuận, TP. Hồ Chí
+                    Minh</option>
+            </select>
+
+            <label for="notes">Ghi chú</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </div>
+
+
 
 
     <div class="footer-extended">
@@ -146,9 +150,9 @@
                 <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
                 <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
                 <div class="social-icons">
-                    <!-- <a href="#"><img src="images/facebook.png" alt="Facebook" width="24"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram" width="24"></a>
-                <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a> -->
+                    <a href="#"><img src="images/fb.jpg" alt="Facebook" width="24"></a>
+                    <a href="#"><img src="images/insta.jpg" alt="Instagram" width="24"></a>
+                    <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a>
                 </div>
             </div>
 
@@ -184,22 +188,10 @@
             <div class="footer-col">
                 <h4>LIÊN HỆ</h4>
                 <ul>
-                    <!-- <li><a href="#">📞 Hotline: 1900 545591</a></li> -->
                     <li><a href="tel:1900 545591">📞 Hotline: 1900 545591</a></li>
                     <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
             </div>
         </div>
-
-        <!-- <div class="footer-app">
-        <h4>TẢI ỨNG DỤNG KIA CONNECT</h4>
-        <div class="app-download">
-            <img src="images/qr.png" alt="QR Code" width="100">
-            <div>
-                <a href="#"><img src="images/googleplay.png" width="120"></a>
-                <a href="#"><img src="images/appstore.png" width="120"></a>
-            </div>
-        </div>
-    </div> -->
 
         <div class="footer-links">
             <a href="#">Chính sách thanh toán</a>
@@ -210,44 +202,36 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div id="footer">
         <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
     </div>
     </div>
 
+    <script>        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Ngăn form gửi đi để xử lý bằng JS
 
+            // Lấy dữ liệu từ form
+            const fullname = this.fullname.value;
+            const email = this.email.value;
+            const carModel = this["carType"].value;
+            const phone = this.phone.value;
+            const address = this.address.value;
+            const showroom = this["kia-showroom"].value;
+
+            // const message = this.message.value;
+            // Hiển thị thông tin trong alert
+            window.alert(
+                "Thông tin bạn đã nhập như sau\n" +
+                "Họ và tên: " + fullname + "\n" +
+                "Số điện thoại: " + phone + "\n" +
+                "Email: " + email + "\n" +
+                "Địa chỉ: " + address + "\n" +
+                "Mẫu xe: " + carModel + "\n" +
+                "Show room: " + showroom + "\n"
+
+                // +  "Lời nhắn: " + message
+            );
+        });</script>
 </body>
 
 </html>

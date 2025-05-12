@@ -56,15 +56,15 @@
                         style="width:50pxpx;height:20px;"></a></li>
             </a>
             <ul id="hmenu">
-                <li><a href="#topMain">Trang chủ</a></li>
-                <li class="hmenuli"><a href="#topMain">Sorento <sup>NEW</sup></a></li>
-                <li><a href="#topMain">KIA connect</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
+                <li><a href="index.html">KIA connect</a></li>
                 <li><a href="#giaBan">Giá xe</a></li>
-                <li id="hideLogo"> <a href="#topMain">
+                <li id="hideLogo"> <a href="index.html">
                         <img src="images/LogoChuDenfinal.png" style="width:100px;height:40px;"></a></li>
-                <li><a href="#topMain">Dịch vụ</a></li>
-                <li><a href="#topMain">Tin tức và khuyến mãi</a></li>
-                <li><a href="#topMain">Liên hệ tư vấn</a></li>
+                <li><a href="index.html">Dịch vụ</a></li>
+                <li><a href="index.html">Tin tức và khuyến mãi</a></li>
+                <li><a href="lienHe.html">Liên hệ tư vấn</a></li>
                 <li><a href="#topMain"><img src="images/searchIcon.png" style="width: 20px;height:20px;"></a></li>
             </ul>
         </div>
@@ -99,9 +99,8 @@
             <dt><a href="tskt.html">Thông số kỹ thuật </a></dt>
             <dt><a href="#hinhAnhXe">Thư viện hình ảnh</a></dt>
             <dt><a href="#giaBan">Giá bán</a></dt>
-            <dt><a href="#">So sánh </a></dt>
             <dt><a href="https://kiavietnam.com.vn/storage/brochure-sorento-v131124.pdf">E Brochure</a></dt>
-
+            <dt><a href="lienHe.html">Liên hệ đặt xe </a></dt>
         </dl>
     </div>
     <!-- <iframe src="" frameborder ="1" width=" 100%" height="450" name="thientinh10"></iframe> -->
@@ -225,15 +224,15 @@
         <div class="footer-grid">
             <div class="footer-logo-info">
                 <img src="images/logonentrang.jpg" alt="Kia Logo" style="height: 10%;width: auto;">
-                <p><strong>CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
+                <p><strong class="bigStrong">CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
                 <p>Giấy CNĐKDN: 4000779880, cấp 27/10/2010</p>
                 <p>Cơ quan cấp: Sở KH & ĐT tỉnh Quảng Nam</p>
                 <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
                 <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
                 <div class="social-icons">
-                    <!-- <a href="#"><img src="images/facebook.png" alt="Facebook" width="24"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram" width="24"></a>
-                <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a> -->
+                    <a href="#"><img src="images/fb.jpg" alt="Facebook" width="24"></a>
+                    <a href="#"><img src="images/insta.jpg" alt="Instagram" width="24"></a>
+                    <a href="#"><img src="images/youtube.png" alt="YouTube" width="24"></a>
                 </div>
             </div>
 
@@ -269,23 +268,12 @@
             <div class="footer-col">
                 <h4>LIÊN HỆ</h4>
                 <ul>
-                    <!-- <li><a href="#">📞 Hotline: 1900 545591</a></li> -->
                     <li><a href="tel:1900 545591">📞 Hotline: 1900 545591</a></li>
                     <li><a href="mailto:cskh@thaco.com.vn">✉️ cskh@thaco.com.vn</a></li>
+                </ul> 
             </div>
-        </div>
 
-        <!-- <div class="footer-app">
-        <h4>TẢI ỨNG DỤNG KIA CONNECT</h4>
-        <div class="app-download">
-            <img src="images/qr.png" alt="QR Code" width="100">
-            <div>
-                <a href="#"><img src="images/googleplay.png" width="120"></a>
-                <a href="#"><img src="images/appstore.png" width="120"></a>
-            </div>
         </div>
-    </div> -->
-
         <div class="footer-links">
             <a href="#">Chính sách thanh toán</a>
             <a href="#">Bảo mật thông tin</a>
@@ -333,7 +321,52 @@
     </div>
     </div>
 
+    <script>
+        const data = [
+            {
+                title: "TRẢI NGHIỆM VẬN HÀNH MỚI",
+                image: "images/khungGam.jpg",
+                description: `Khung gầm thế hệ mới (New Life Platform) - Động cơ và Hộp số Smartstream thế hệ mới,
+      được thiết kế với mục tiêu tạo trải nghiệm đầy cảm hứng và tối ưu hiệu suất hoạt động,
+      tiết kiệm nhiên liệu và thân thiện với môi trường.`
+            },
+            {
+                title: "KHỞI ĐỘNG XE TỪ XA",
+                image: "images/remoteStart.png",
+                description: `Tính năng khởi động xe từ xa giúp bạn dễ dàng làm mát hoặc sưởi ấm cabin trước khi lên xe,
+      mang lại sự tiện nghi và thoải mái trong mọi điều kiện thời tiết.`
+            },
+            {
+                title: "4 CHẾ ĐỘ LÁI VÀ 03 CHẾ ĐỘ VẬN HÀNH THEO ĐỊA HÌNH",
+                image: "images/driveMode.jpg",
+                description: `Hệ thống lái tích hợp 4 chế độ: Comfort, Eco, Sport, Smart và 3 chế độ địa hình: Snow, Mud, Sand –
+      cho phép chiếc xe vận hành linh hoạt trên mọi loại địa hình.`
+            },
+            {
+                title: "ĐỘNG CƠ",
+                image: "images/engine.jpg",
+                description: `Động cơ Smartstream thế hệ mới, mạnh mẽ và tiết kiệm nhiên liệu hơn,
+      giúp cải thiện hiệu suất vận hành tổng thể và giảm khí thải ra môi trường.`
+            }
+        ];
 
+        const lis = document.querySelectorAll(".vanhanh-left li");
+        const img = document.querySelector(".vanhanh-right img");
+        const p = document.querySelector(".vanhanh-right p");
+
+        lis.forEach((li, index) => {
+            li.addEventListener("click", () => {
+                // Xoá active cũ
+                document.querySelector(".vanhanh-left li.active")?.classList.remove("active");
+                // Thêm active mới
+                li.classList.add("active");
+
+                // Thay đổi nội dung
+                img.src = data[index].image;
+                p.textContent = data[index].description;
+            });
+        });
+    </script>
 </body>
 
 </html>
