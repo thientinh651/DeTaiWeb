@@ -16,11 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kia Sorento 2023</title>
     <link rel="icon" type="image/x-icon" href="images/logonentrang.jpg">
-    <!-- <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/main.css"> -->
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
-    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
     <link rel="stylesheet" href="./styles/main.css">
 
 </head>
@@ -30,22 +25,13 @@
         function toggleMenu() {
             document.getElementById("hmenu").classList.toggle("active");
         }
-        // let viTri = window.scrollY;
-        // window.addEventListener("scroll", function () {
-        //     const hmenu = document.getElementById("hmenu");
-        //     if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
-        //         if (window.scrollY > viTri + 10) {//xuống 10x ẩn 
-        //             hmenu.classList.remove("active");
-        //         }
-        //     }
-        //     lastScrollY = window.scrollY;
-        // });
+        
         let viTriCu = window.scrollY; // vị trí cuộn trước đó
 
         window.addEventListener("scroll", function () {
             const hmenu = document.getElementById("hmenu");
 
-            // chỉ xử lý nếu màn hình nhỏ và menu đang mở
+        // chỉ xử lý nếu màn hình nhỏ và menu đang mở
             if (window.innerWidth <= 500 && hmenu.classList.contains("active")) {
                 if (window.scrollY > viTriCu + 10) {
                     hmenu.classList.remove("active");
@@ -53,12 +39,6 @@
             }
             viTriCu = window.scrollY; // luôn cập nhật vị trí sau mỗi lần cuộn
         });
-
-
-
-
-
-
     </script>
     <!-- Thanh menu top chính -->
     <div id="menu">
@@ -211,11 +191,11 @@
             e.preventDefault(); // Ngăn form gửi đi để xử lý bằng JS
 
             // Lấy dữ liệu từ form
-            const fullname = this.fullname.value;
-            const email = this.email.value;
+            const fullname = this.fullname.value.trim();
+            const email = this.email.value.trim();
             const carModel = this["carType"].value;
-            const phone = this.phone.value;
-            const address = this.address.value;
+            const phone = this.phone.value.trim();
+            const address = this.address.value.trim();
             const showroom = this["kia-showroom"].value;
 
             // const message = this.message.value;
@@ -231,7 +211,8 @@
 
                 // +  "Lời nhắn: " + message
             );
-        });</script>
+        });
+    </script>
 </body>
 
 </html>
