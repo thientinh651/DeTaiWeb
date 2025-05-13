@@ -67,7 +67,7 @@
                         style="width:50pxpx;height:20px;"></a></li>
             </a>
             <ul id="hmenu">
-                               <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
                 <li class="hmenuli"><a href="index.html">Sorento <sup>NEW</sup></a></li>
                 <li><a href="index.html">KIA connect</a></li>
                 <li><a href="#giaBan">Giá xe</a></li>
@@ -119,7 +119,9 @@
             <!-- <img src="images/NoiThat/" alt="Xe 33">
             <img src="images/NoiThat/" alt="Xe 34"> -->
         </div>
-         <h1>Ngoại thất</h1>
+        <button onclick="scrollToTop()" id="backToTopBtn" title="Lên đầu trang">&uarr;</button>
+
+        <h1>Ngoại thất</h1>
         <div class="gallery">
             <img src="images/NgoaiThat/calangLuoiHo.png" alt="Xe 1">
             <img src="images/NgoaiThat/dau.jpg" alt="Xe 2">
@@ -129,10 +131,11 @@
             <img src="images/NgoaiThat/denhau.png" alt="Xe 6">
             <img src="images/NgoaiThat/duoixe.png" alt="Xe 7">
             <img src="images/NgoaiThat/cambienlui.png" alt="Xe 8">
-            <!-- <img src="images/NgoaiThat/" alt="Xe 9">
-            <img src="images/NgoaiThat/" alt="Xe 10">
-            <img src="images/NgoaiThat/" alt="Xe 11"> -->
-
+            <img src="images/NgoaiThat/guongDien.png" alt="Xe 9">
+            <img src="images/NgoaiThat/denGam.png" alt="Xe 10">
+            <img src="images/NgoaiThat/moCuaXe.png" alt="Xe 11">
+            <img src="images/NgoaiThat/moCuaHau.png" alt="Xe 10">
+            <!-- <img src="images/NgoaiThat/" alt="Xe 11"> -->
     </section>
 
 
@@ -216,6 +219,11 @@
 
 
 
+    <!-- Overlay hiển thị ảnh lớn -->
+    <div id="imageOverlay" class="overlay">
+        <span class="close">&times;</span>
+        <img class="overlay-img" id="overlayImage" src="" alt="Phóng to ảnh">
+    </div>
 
 
 
@@ -247,7 +255,83 @@
     </div>
     </div>
 
+    <script>
+        window.onscroll = function () {
+            toggleBackToTopBtn();
+        };
 
+        function toggleBackToTopBtn() {
+            const btn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        // Khi người dùng bấm nút
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+
+
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const overlay = document.getElementById('imageOverlay');
+        const overlayImage = document.getElementById('overlayImage');
+        const closeBtn = document.querySelector('.overlay .close');
+
+        let zoomLevel = 1;
+
+        // Mở overlay khi click ảnh
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImage.src = img.src;
+                overlay.style.display = 'flex';
+                zoomLevel = 1;
+                overlayImage.style.transform = 'scale(1)';
+            });
+        });
+
+        // Đóng overlay khi click nút X
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        // Đóng overlay khi click ra ngoài ảnh
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+
+        // Đóng overlay khi nhấn ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                overlay.style.display = 'none';
+            }
+        });
+
+        // Zoom in/out bằng cuộn chuột
+        overlayImage.addEventListener('wheel', (e) => {
+            e.preventDefault(); // Ngăn cuộn trang
+            const scaleStep = 0.1;
+
+            if (e.deltaY < 0) {
+                // cuộn lên: zoom in
+                zoomLevel += scaleStep;
+            } else {
+                // cuộn xuống: zoom out
+                zoomLevel -= scaleStep;
+                if (zoomLevel < 1) zoomLevel = 1; // Không thu nhỏ quá
+            }
+
+            overlayImage.style.transform = `scale(${zoomLevel})`;
+        });
+    </script>
 </body>
 
 </html>

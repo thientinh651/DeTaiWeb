@@ -80,6 +80,7 @@
             </ul>
         </div>
     </div>
+<button onclick="scrollToTop()" id="backToTopBtn" title="Lên đầu trang">&uarr;</button>
 
     <div class="tsktTable">
         <h3>KÍCH THƯỚC - TRỌNG LƯỢNG</h3>
@@ -514,7 +515,28 @@
     </div>
     </div>
 
+    <script>
+        window.onscroll = function () {
+            toggleBackToTopBtn();
+        };
 
+        function toggleBackToTopBtn() {
+            const btn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        // Khi người dùng bấm nút
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 
 </html>

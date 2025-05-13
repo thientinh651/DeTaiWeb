@@ -68,10 +68,6 @@ body {
   font-size: x-small;
 }
 
-/* #hmenu li a:hover {
-    color: #d60f0f
-} */
-
 #hmenu a {
   color: #000000;
   font-weight: bold;
@@ -81,12 +77,7 @@ body {
 }
 
 #hmenu li a:hover {
-  /* color: #162b4e;
-    font-weight: bold;
-    font-style: italic; */
   border-bottom: 2px solid #000000;
-  /* <-- Đây nè */
-  /* transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06); */
   transition: linear 0.3s;
 }
 
@@ -111,8 +102,6 @@ body {
     width: 100%;
     padding: 0;
     max-height: 300px;
-    /* overflow-y: auto; */
-
   }
 
   #hideLogo {
@@ -456,6 +445,9 @@ body {
   padding: 40px;
   gap: 40px;
 }
+.vanhanh-container h1{
+  padding: 20px;
+}
 
 .vanhanh-left {
   flex: 1;
@@ -473,6 +465,15 @@ body {
   opacity: 0.6;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding-left: 20px;
+  list-style-type: none;
+}
+.vanhanh-right img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.vanhanh-right p {
+    transition: opacity 0.5s ease-in-out;
 }
 
 .vanhanh-left li.active {
@@ -648,7 +649,8 @@ table.car-price tbody td {
   gap: 20px;
   max-width: 1200px;
   margin: auto;
-  align-self: start; /*abccf */
+  align-self: start;
+  /*abccf */
 }
 
 .footer-col h4 {
@@ -664,7 +666,7 @@ table.car-price tbody td {
 
 .footer-col ul li {
   margin: 5px 0;
-   margin: 2px 0; 
+  margin: 2px 0;
 }
 
 .footer-col ul li a {
@@ -677,17 +679,22 @@ table.car-price tbody td {
 }
 
 .footer-logo-info img {
-  margin:20px 10px;
+  margin: 20px 10px;
 }
+
 .footer-logo-info .bigStrong {
   font-size: 20px;
 }
+
 .footer-logo-info p {
   margin: 3px 0;
   font-size: 13px;
   line-height: 1.4;
-}.footer-extended {
-  padding: 20px 10px; /* từ 40px xuống còn 20px */
+}
+
+.footer-extended {
+  padding: 20px 10px;
+  /* từ 40px xuống còn 20px */
 }
 
 .social-icons {
@@ -814,10 +821,12 @@ table.car-price tbody td {
   font-weight: bold;
   color: #333;
 }
+
 .contact-form sup {
-  color:red;
+  color: red;
   font-size: x-small;
 }
+
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -881,9 +890,67 @@ table.car-price tbody td {
     font-size: 15px;
   }
 }
+/* nút đi lên */
+#backToTopBtn {
+  display: none; /* Ẩn ban đầu */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  width: 40px; 
+  height: 40px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8; 
+}
+
+#backToTopBtn:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
 
 
+/* Overlay phong to ảnh */
+/* Overlay để hiển thị ảnh phóng to */
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+.overlay-img {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.overlay .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
 
 
 
