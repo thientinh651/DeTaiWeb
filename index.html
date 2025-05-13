@@ -136,7 +136,7 @@
         </div>
     </div>
 
-<button onclick="scrollToTop()" id="backToTopBtn" title="Lên đầu trang">&uarr;</button>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Lên đầu trang">&uarr;</button>
 
 
 
@@ -314,7 +314,11 @@
         <p>Copyright&copy; Kia Việt Nam<br />Nguyễn Phúc Thiên Tinh<br /> MSSV: DH52201572</p>
     </div>
     </div>
-
+    <!-- Overlay hiển thị ảnh lớn -->
+    <div id="imageOverlay" class="overlay">
+        <span class="close">&times;</span>
+        <img class="overlay-img" id="overlayImage" src="" alt="Phóng to ảnh">
+    </div>
     <script>
         const data = [
             {
@@ -347,7 +351,7 @@
         const lis = document.querySelectorAll(".vanhanh-left li");
         const img = document.querySelector(".vanhanh-right img");
         const p = document.querySelector(".vanhanh-right p");
-        
+
         lis.forEach((li, index) => {
             li.addEventListener("click", () => {
                 // Xoá active cũ
@@ -389,6 +393,58 @@
                 behavior: "smooth"
             });
         }
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const overlay = document.getElementById('imageOverlay');
+        const overlayImage = document.getElementById('overlayImage');
+        const closeBtn = document.querySelector('.overlay .close');
+
+        let zoomLevel = 1;
+
+        // Mở overlay khi click ảnh
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImage.src = img.src;
+                overlay.style.display = 'flex';
+                zoomLevel = 1;
+                overlayImage.style.transform = 'scale(1)';
+            });
+        });
+
+        // Đóng overlay khi click nút X
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        // Đóng overlay khi click ra ngoài ảnh
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+
+        // Đóng overlay khi nhấn ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Esc') {
+                overlay.style.display = 'none';
+            }
+        });
+
+        // Zoom in/out bằng cuộn chuột
+        overlayImage.addEventListener('wheel', (e) => {
+            e.preventDefault(); // Ngăn cuộn trang
+            const scaleStep = 0.1;
+
+            if (e.deltaY < 0) {
+                // cuộn lên: zoom in
+                zoomLevel += scaleStep;
+            } else {
+                // cuộn xuống: zoom out
+                zoomLevel -= scaleStep;
+                if (zoomLevel < 1) zoomLevel = 1; // Không thu nhỏ quá
+            }
+
+            overlayImage.style.transform = `scale(${zoomLevel})`;
+        });
 
     </script>
 </body>
