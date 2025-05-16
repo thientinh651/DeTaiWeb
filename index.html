@@ -17,9 +17,7 @@
     <title>Kia Sorento 2023</title>
     <link rel="icon" type="image/x-icon" href="images/logonentrang.jpg">
     <link rel="stylesheet" href="./styles/main.css">
-
 </head>
-
 <body id="topMain">
     <script>
         function toggleMenu() {
@@ -102,7 +100,6 @@
                 allowfullscreen>
             </iframe>
         </div>
-
         <div class="right">
             <div class="ChuSnen">S</div>
             <h1>Kia Sorento</h1>
@@ -221,7 +218,7 @@
                 <p><strong class="bigStrong">CÔNG TY TNHH PHÂN PHỐI THACO AUTO</strong></p>
                 <p>Giấy CNĐKDN: 4000779880, cấp 27/10/2010</p>
                 <p>Cơ quan cấp: Sở KH & ĐT tỉnh Quảng Nam</p>
-                <p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p>
+                <a href="https://www.google.com/maps/dir//Tam+Hi%E1%BB%87p,+N%C3%BAi+Th%C3%A0nh+District,+Qu%E1%BA%A3ng+Nam,+Vietnam/@15.4392093,108.5498728,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3169c60ecd1a2d8f:0x343537ae5d5ab8a8!2m2!1d108.6116249!2d15.4382669?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"><p>Địa chỉ: Thôn 4, Xã Tam Hiệp, Núi Thành, Quảng Nam</p></a>
                 <!-- <img src="images/boCongThuong.png" alt="Bộ Công Thương" style="width: 120px;"> -->
                 <div class="social-icons">
                     <a href="#"><img src="images/fb.jpg" alt="Facebook" width="24"></a>
@@ -393,6 +390,9 @@
                 behavior: "smooth"
             });
         }
+
+
+        //xem ảnh phóng to
         const galleryImages = document.querySelectorAll('.gallery img');
         const overlay = document.getElementById('imageOverlay');
         const overlayImage = document.getElementById('overlayImage');
@@ -442,7 +442,6 @@
                 zoomLevel -= scaleStep;
                 if (zoomLevel < 1) zoomLevel = 1; // Không thu nhỏ quá
             }
-
             overlayImage.style.transform = `scale(${zoomLevel})`;
         });
 
